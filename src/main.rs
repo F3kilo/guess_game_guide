@@ -47,7 +47,8 @@ impl State {
     }
 
     fn random_number() -> u32 {
-        todo!()
+        let random_number: u32 = rand::random();
+        (random_number % 100) as _
     }
 
     fn run_guessing(number: u32) -> Self {
