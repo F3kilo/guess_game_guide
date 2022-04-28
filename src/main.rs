@@ -52,6 +52,24 @@ impl State {
     }
 
     fn run_guessing(number: u32) -> Self {
-        todo!()
+        println!();
+        println!("**** GUESSING ****");
+        println!("Number from 0 to 99 to guess");
+        println!("Other for go to Menu");
+        print!("Your choice: ");
+        loop {
+            let choice = Self::read_input();
+            match choice {
+                Some(x) if x < 100 && x < number => println!("Too small!"),
+                Some(x) if x < 100 && x > number => println!("Too big!"),
+                Some(x) if x < 100 && x == number => {
+                    println!("Right! You win!");
+                    break;
+                }
+                _ => break,
+            }
+        }
+
+        Self::Menu
     }
 }
