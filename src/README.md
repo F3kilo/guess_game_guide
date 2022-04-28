@@ -1,0 +1,1 @@
+Simple "guess number" game example. Logical improvement splitted by commits.
