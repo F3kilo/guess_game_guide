@@ -40,7 +40,10 @@ impl State {
     }
 
     fn read_input() -> Option<u32> {
-        todo!()
+        let mut buffer = String::new();
+        std::io::stdin().read_line(&mut buffer).unwrap();
+        let number = buffer.trim().parse().ok()?;
+        Some(number)
     }
 
     fn random_number() -> u32 {
