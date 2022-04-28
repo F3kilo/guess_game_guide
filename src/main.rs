@@ -27,6 +27,23 @@ impl State {
     }
 
     fn run_menu() -> Self {
+        println!();
+        println!("**** MENU ****");
+        println!("1) Guessing");
+        println!("Other) Exit");
+        print!("Your choice: ");
+        let choice = Self::read_input();
+        match choice {
+            Some(1) => Self::Guessing(Self::random_number()),
+            _ => Self::Exit,
+        }
+    }
+
+    fn read_input() -> Option<u32> {
+        todo!()
+    }
+
+    fn random_number() -> u32 {
         todo!()
     }
 
